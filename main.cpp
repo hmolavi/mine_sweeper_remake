@@ -86,10 +86,7 @@ void computeNeighbors(char *board, std::size_t xdim, std::size_t ydim){
 
                     for ( int xShift{-1}; xShift<2; ++xShift ){
                         if ( 0 <= xLoc + xShift && xLoc + xShift < xdim ){
-                            
-                            if ( yShift*xdim + xShift != 0 && (board[i + yShift*xdim + xShift]&0x09) != 0x09) {
-                                board[i + yShift*xdim + xShift] += 0b00000001;
-                            }                          
+                            board[i + yShift*xdim + xShift] += 0b00000001;                                                     
                         }                
                     }
                 }
